@@ -12,6 +12,8 @@ namespace Comp2007_Week12
     {
         protected void Application_Start()
         {
+            System.Data.Entity.Database.SetInitializer(
+                new Comp2007_Week12.Models.SampleData());
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
